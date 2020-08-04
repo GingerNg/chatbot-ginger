@@ -1,0 +1,21 @@
+language: "zh"
+
+pipeline:
+- name: "MitieNLP"  #　词向量？
+  model: "data/total_word_feature_extractor_zh.dat"
+- name: "JiebaTokenizer"  # 分词器
+- name: "MitieEntityExtractor"  # 实体提取
+- name: "EntitySynonymMapper"  # 实体同义词映射
+- name: "RegexFeaturizer"    # 支持正则表达式？
+- name: "MitieFeaturizer"　　# 特征化
+- name: "SklearnIntentClassifier"  # 意图分类  intent classifier
+
+policies:
+  - name: KerasPolicy
+    epochs: 500
+    max_history: 5
+  - name: FallbackPolicy
+    fallback_action_name: 'action_default_fallback'
+  - name: MemoizationPolicy
+    max_history: 5
+  - name: FormPolicy
