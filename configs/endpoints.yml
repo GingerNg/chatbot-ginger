@@ -1,5 +1,11 @@
 # This file contains the different endpoints your bot can use.
 
+# 指定action server的url
+# 当然，也可以将action server单独实现在一个web server项目中
+# 那么这个url为"https://yourWebIp:yourWebPort/webhook“
+action_endpoint:
+ url: "http://localhost:5055/webhook"
+
 # Server where the models are pulled from.
 # https://rasa.com/docs/rasa/user-guide/configuring-http-api/#fetching-models-from-a-server/
 

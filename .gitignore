@@ -1,1 +1,4 @@
 *.pyc
+models/*
+chatbot-ginger.log
+data/total_word_feature_extractor_zh.dat

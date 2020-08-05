@@ -1,2 +1,2 @@
 
-source chatbot_env/bin/activate
+source /home/ginger/Venvs/chatbot/bin/activate
