@@ -27,6 +27,7 @@ def webToBot():
     if content is None:
         return 'empty input'
     response = requestRasabotServer('jiangdg', content)
+    print(response.text.encode('utf-8').decode("unicode-escape"))
     # return response.text
     # utf-8转中文
     return response.text.encode('utf-8').decode("unicode-escape")
